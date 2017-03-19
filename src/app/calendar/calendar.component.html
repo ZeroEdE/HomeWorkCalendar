@@ -1,0 +1,22 @@
+<div class="container" style="margin-top: 16px">
+
+  <h3 class="text-center">{{ nowDate.getFullYear() }} / {{ nowDate.getMonth() + 1 }}</h3>
+
+  <div class="calendar-grid row seven-cols">
+    <div class="col-md-1 app-grid" style="text-align: center">日</div>
+    <div class="col-md-1 app-grid" style="text-align: center">一</div>
+    <div class="col-md-1 app-grid" style="text-align: center">二</div>
+    <div class="col-md-1 app-grid" style="text-align: center">三</div>
+    <div class="col-md-1 app-grid" style="text-align: center">四</div>
+    <div class="col-md-1 app-grid" style="text-align: center">五</div>
+    <div class="col-md-1 app-grid" style="text-align: center">六</div>
+
+    <date *ngFor="let day of calendarDays" [day]="day.day" [isCurrentMonth]="day.isCurrentMonth">
+
+      <event *ngFor="let item of day.items" [type]="item.type"> {{ item.title }} </event>
+
+    </date>
+
+  </div>
+</div>
+

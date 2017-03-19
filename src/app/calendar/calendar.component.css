@@ -1,0 +1,36 @@
+.calendar-grid {
+  border-left: .55px solid gray;
+  border-top: .55px solid gray;
+  font-size: 20px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.app-grid {
+  border-right: .55px solid gray;
+  border-bottom: .55px solid gray;
+  color: #444444;
+  padding: 8px;
+}
+
+.app-grid.current-month {
+  color: black;
+}
+
+.app-grid .calendar-item {
+  padding-left: 8px;
+  margin-top: 3px;
+  display: block;
+}
+
+.app-grid .calendar-item.work {
+  background-color: #66DD00;
+}
+
+.app-grid .calendar-item.dating {
+  background-color: #FF7744;
+}
+
+.app-grid .calendar-item.birthday {
+  background-color: #B94FFF;
+}
